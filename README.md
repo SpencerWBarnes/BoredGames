@@ -20,12 +20,11 @@ Since I am new to making my own web applications from scratch, I will first use 
 For client side, I plan to use JavaScript or TypeScript.
 
 ### Current
-- Nada
+- Flask v1.1.1
+- Bootstrap v4.4
 
 ### To try
-- Flask
 - Jinja2 Templates
-- Bootstrap
 - Database
   - Firebase?
   - MongoDB?
