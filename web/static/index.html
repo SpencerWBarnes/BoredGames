@@ -5,9 +5,11 @@
         <title> Bored Games </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- This is the Flasky way of doing this, it is more maintainable but does not work right now
+        Perhaps because index.html is in Static instead of Template? -->
+        <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"> -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
         <meta name="description" content="A website dedicated to making 
             games and trying web technologies.">
@@ -18,6 +20,10 @@
             <h1> Home </h1>
         </div>
         <p> Here is where you can access our various games. </p>
+
+        <!-- These two scripts are used for some of Bootstrap's helpful js, currently un used -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script> -->
     </body>
 
 </html>
