@@ -6,6 +6,7 @@ A repository dedicated to learning various web application skills by making onli
 ## Progress
 
 ``` diff
++ Hello World
 - Sorry
 - Mancala
 - Tic-Tac-Toe
