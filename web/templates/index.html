@@ -23,16 +23,16 @@
         <div class="container">
             <p> Here is where you can access our various games. </p>
             
-            <!-- Duplicates to be replaced by effecient use of looping -->
             <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2">
 
             {% for item in cards %}
                 <div class="col mb-4">
-                    <div class="card">
+                    <div class="card text-center">
                         <img class="card-img-top" src="https://q-workshop.com/2108-large_default/d6-steampunk-black-white-die-1.jpg" alt="Board game die">
                         <div class="card-body">
                             <h4 class="card-title"> Here is game title: {{ item }} </h4>
-                            <p class="card-text"> Here is the game desciption </p>
+                            <p class="card-text text-left"> Here is the game desciption </p>
+                            <a href="/{{ item }}" class="btn btn-dark stretched-link"> Link to game </a> 
                         </div>
                     </div>
                 </div>

@@ -5,10 +5,11 @@ app = Flask(__name__,
             static_folder='web/static',
             template_folder='web/templates')
 
+GAMES = ["first", "second", "third", "fourth", "fifth"]
+
 @app.route("/")
 def loadHomePage():
-    cards = ["first", "second", "third", "fourth", "fifth"]
-    return render_template("index.html", cards=cards)
+    return render_template("index.html", cards=GAMES)
 
 if __name__ == "__main__":
     app.run()
