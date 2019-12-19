@@ -22,9 +22,9 @@ For client side, I plan to use JavaScript or TypeScript.
 ### Current
 - Flask v1.1.1
 - Bootstrap v4.4
+- Jinja2 Templates
 
 ### To try
-- Jinja2 Templates
 - Database
   - Firebase?
   - MongoDB?
