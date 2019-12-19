@@ -10,6 +10,7 @@
         Perhaps because index.html is in Static instead of Template? -->
         <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"> -->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <!-- For Bootstrap reference: https://bootstrapcreative.com/resources/bootstrap-4-css-classes-index/ -->
 
         <meta name="description" content="A website dedicated to making 
             games and trying web technologies.">
@@ -19,7 +20,74 @@
         <div class="jumbotron">
             <h1> Home </h1>
         </div>
-        <p> Here is where you can access our various games. </p>
+        <div class="container">
+            <p> Here is where you can access our various games. </p>
+            
+            <!-- Duplicates to be replaced by effecient use of looping -->
+            <div class="row my-5">
+                <div class="card col-md-4 col-sm-6 mx-4">
+                    <img class="card-img-top" src="https://q-workshop.com/2108-large_default/d6-steampunk-black-white-die-1.jpg" alt="Board game die">
+                    <div class="card-body">
+                        <h4 class="card-title"> Here is game title </h4>
+                        <p class="card-text"> Here is the game desciption </p>
+                    </div>
+                </div>
+                <div class="card col-md-4 col-sm-6">
+                    <img class="card-img-top" src="https://q-workshop.com/2108-large_default/d6-steampunk-black-white-die-1.jpg" alt="Board game die">
+                    <div class="card-body">
+                        <h4 class="card-title"> Here is game title </h4>
+                        <p class="card-text"> Here is the game desciption </p>
+                    </div>
+                </div>
+                <div class="card col-md-4 col-sm-6">
+                    <img class="card-img-top" src="https://q-workshop.com/2108-large_default/d6-steampunk-black-white-die-1.jpg" alt="Board game die">
+                    <div class="card-body">
+                        <h4 class="card-title"> Here is game title </h4>
+                        <p class="card-text"> Here is the game desciption </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card col-md-4 col-sm-6">
+                    <img class="card-img-top" src="https://q-workshop.com/2108-large_default/d6-steampunk-black-white-die-1.jpg" alt="Board game die">
+                    <div class="card-body">
+                        <h4 class="card-title"> Here is game title </h4>
+                        <p class="card-text"> Here is the game desciption </p>
+                    </div>
+                </div>
+                <div class="card col-md-4 col-sm-6">
+                    <img class="card-img-top" src="https://q-workshop.com/2108-large_default/d6-steampunk-black-white-die-1.jpg" alt="Board game die">
+                    <div class="card-body">
+                        <h4 class="card-title"> Here is game title </h4>
+                        <p class="card-text"> Here is the game desciption </p>
+                    </div>
+                </div>
+                <div class="card col-md-4 col-sm-6">
+                    <img class="card-img-top" src="https://q-workshop.com/2108-large_default/d6-steampunk-black-white-die-1.jpg" alt="Board game die">
+                    <div class="card-body">
+                        <h4 class="card-title"> Here is game title </h4>
+                        <p class="card-text"> Here is the game desciption </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card col-md-4 col-sm-6">
+                    <img class="card-img-top" src="https://q-workshop.com/2108-large_default/d6-steampunk-black-white-die-1.jpg" alt="Board game die">
+                    <div class="card-body">
+                        <h4 class="card-title"> Here is game title </h4>
+                        <p class="card-text"> Here is the game desciption </p>
+                    </div>
+                </div>
+                <div class="card col-md-4 col-sm-6">
+                    <img class="card-img-top" src="https://q-workshop.com/2108-large_default/d6-steampunk-black-white-die-1.jpg" alt="Board game die">
+                    <div class="card-body">
+                        <h4 class="card-title"> Here is game title </h4>
+                        <p class="card-text"> Here is the game desciption </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
         <!-- These two scripts are used for some of Bootstrap's helpful js, currently un used -->
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
