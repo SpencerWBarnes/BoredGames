@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__,
             static_url_path='', 
@@ -7,7 +7,8 @@ app = Flask(__name__,
 
 @app.route("/")
 def loadHomePage():
-    return app.send_static_file("index.html")
+    cards = ["first", "second", "third", "fourth", "fifth"]
+    return render_template("index.html", cards=cards)
 
 if __name__ == "__main__":
     app.run()

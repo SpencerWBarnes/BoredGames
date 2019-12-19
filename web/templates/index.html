@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title> Bored Games </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- This is the Flasky way of doing this, it is more maintainable but does not work right now
+        Perhaps because index.html is in Static instead of Template? -->
+        <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"> -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <!-- For Bootstrap reference: https://bootstrapcreative.com/resources/bootstrap-4-css-classes-index/ -->
+
+        <meta name="description" content="A website dedicated to making 
+            games and trying web technologies.">
+    </head>
+
+    <body>
+        <div class="jumbotron">
+            <h1> Home </h1>
+        </div>
+        <div class="container">
+            <p> Here is where you can access our various games. </p>
+            
+            <!-- Duplicates to be replaced by effecient use of looping -->
+            <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2">
+
+            {% for item in cards %}
+                <div class="col mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://q-workshop.com/2108-large_default/d6-steampunk-black-white-die-1.jpg" alt="Board game die">
+                        <div class="card-body">
+                            <h4 class="card-title"> Here is game title: {{ item }} </h4>
+                            <p class="card-text"> Here is the game desciption </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            
+            </div>
+        </div>
+
+        <!-- These two scripts are used for some of Bootstrap's helpful js, currently un used -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script> -->
+    </body>
+
+</html>
