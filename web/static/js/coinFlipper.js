@@ -7,14 +7,21 @@ function getFlipResult()
     return result;
 }
 
-function interpretResult(result)
+function flip(coin, resultDisplay)
 {
-    if (result != 0)
-        return "Heads";
-    return "Tails";
-}
+    let result = getFlipResult();
+    let resultString = "";
 
-function flip(resultDisplay)
-{
-    resultDisplay.textContent = interpretResult(getFlipResult());
+    if (result != 0)
+    {
+        coin.setAttribute("class", "coin animate-heads");
+        resultString = "Heads";
+    }
+    else
+    {
+        coin.setAttribute("class", "coin animate-tails");
+        resultString = "Tails"; 
+    }
+
+    resultDisplay.textContent = resultString;
 }

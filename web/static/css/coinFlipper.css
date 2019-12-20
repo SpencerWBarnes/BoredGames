@@ -1,0 +1,67 @@
+/* coinFlipper.css
+Custom styles to be used on the coin flip game */
+
+/* Heavily influenced by tutorial: https://www.youtube.com/watch?v=_XgNlQCSSpY */
+
+.coin
+{
+    width: min(50vw, 50vh);
+    height: min(50vw, 50vh);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+}
+
+.coin div
+{
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.coin .heads
+{
+    border: 3px solid grey;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.coin .tails
+{
+    border: 3px solid grey;
+    background-color: black;
+    border-radius: 50%;
+    transform: rotateY(-180deg);
+}
+
+.animate-heads
+{
+    animation: flipHeads 2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flipHeads
+{
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(900deg);
+    }
+}
+
+.animate-tails
+{
+    animation: flipTails 2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flipTails
+{
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(900deg);
+    }
+}
