@@ -9,6 +9,7 @@ Custom styles to be used on the coin flip game */
     height: min(50vw, 50vh);
     border-radius: 50%;
     transform-style: preserve-3d;
+    display: inline-flex;
 }
 
 .coin div

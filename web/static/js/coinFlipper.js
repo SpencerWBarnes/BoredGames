@@ -2,7 +2,8 @@
 // Helper functions for the coin flipping game
 
 // Necessary evil to know coin's state between clicks
-var oldResult = 1;
+// Default is last div created, in this case Tails
+var oldResult = 0;
 
 function getFlipResult()
 {
