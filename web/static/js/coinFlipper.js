@@ -27,13 +27,37 @@ function flip(coin, resultDisplay)
 
     if (result != oldResult)
     {
-        // Flip 180
-        newCoin.setAttribute("class", "coin animate-opposite");
+        // Flip 540
+        newCoin.classList.remove("animate-duplicate");
+        newCoin.classList.add("animate-opposite");
     }
     else
     {
         // Flip 360
-        newCoin.setAttribute("class", "coin animate-duplicate");
+        newCoin.classList.remove("animate-opposite");
+        newCoin.classList.add("animate-duplicate");
+    }
+
+    // The animations are hard set to start and end on certain faces
+    // Our choices:
+    //      1) Create an animation from each face to each face (4 total)
+    //      2) Make it blur so no one knows
+    //      3) Dynamically flip which face is on top
+    
+    // Here is choice 3
+    let heads = newCoin.children[0];
+    let tails = newCoin.children[1];
+    if (result != 0)
+    {
+        // Heads is top
+        heads.style.transform = "";
+        tails.style.transform = "rotateY(-180deg)";
+    }
+    else
+    {
+        // Tails is top
+        tails.style.transform = "";
+        heads.style.transform = "rotateY(-180deg)";
     }
     
     // Reflow element so animation runs again

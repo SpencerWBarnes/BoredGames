@@ -31,12 +31,11 @@ Custom styles to be used on the coin flip game */
     border: 3px solid grey;
     background-color: black;
     border-radius: 50%;
-    transform: rotateY(-180deg);
 }
 
 .animate-duplicate
 {
-    animation: duplicate 1s ease-in-out;
+    animation: duplicate 0.66s ease-in-out;
     animation-fill-mode: forwards;
 }
 
@@ -52,16 +51,16 @@ Custom styles to be used on the coin flip game */
 
 .animate-opposite
 {
-    animation: opposite 0.5s ease-in-out;
+    animation: opposite 1s ease-in-out;
     animation-fill-mode: forwards;
 }
 
 @keyframes opposite
 {
     from {
-        transform: rotateY(0deg);
+        transform: rotateY(-180deg);
     }
     to {
-        transform: rotateY(180deg);
+        transform: rotateY(360deg);
     }
 }
