@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title> 
+            {% block title %} 
+            {% endblock %}
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- This is the Flasky way of doing this, it is more maintainable but does not work right now -->
+        <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"> -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <!-- For Bootstrap reference: https://bootstrapcreative.com/resources/bootstrap-4-css-classes-index/ -->
+
+        {% block extra_css %} 
+        {% endblock %}
+    </head>
+
+    <body>
+        <div class="jumbotron">
+            <h1> 
+                {% block header %} 
+                {% endblock %}
+            </h1>
+        </div>
+        <div class="container">
+            {% block content %} 
+            {% endblock %}
+        </div>
+        {% block footer %} 
+        {% endblock %}
+
+        <!-- These two scripts are used for some of Bootstrap's helpful js, currently un used -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script> -->
+        {% block extra_js %} 
+        {% endblock %}
+    </body>
+
+</html>

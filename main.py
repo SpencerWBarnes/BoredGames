@@ -5,7 +5,7 @@ app = Flask(__name__,
             static_folder='web/static',
             template_folder='web/templates')
 
-GAMES = ["helloWorld", "first", "second", "third", "fourth"]
+GAMES = ["helloWorld", "coinFlipper"]
 
 @app.route("/")
 def loadHomePage():
