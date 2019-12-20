@@ -36,7 +36,7 @@ Custom styles to be used on the coin flip game */
 
 .animate-duplicate
 {
-    animation: duplicate 0.66s ease-in-out;
+    animation: duplicate 1s ease-in-out;
     animation-fill-mode: forwards;
 }
 
@@ -52,14 +52,14 @@ Custom styles to be used on the coin flip game */
 
 .animate-opposite
 {
-    animation: opposite 1s ease-in-out;
+    animation: opposite 0.5s ease-in-out;
     animation-fill-mode: forwards;
 }
 
 @keyframes opposite
 {
     from {
-        transform: rotateY(-180deg);
+        transform: rotateY(180deg);
     }
     to {
         transform: rotateY(360deg);
