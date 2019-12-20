@@ -34,34 +34,34 @@ Custom styles to be used on the coin flip game */
     transform: rotateY(-180deg);
 }
 
-.animate-heads
+.animate-duplicate
 {
-    animation: flipHeads 2s ease-in-out;
+    animation: duplicate 1s ease-in-out;
     animation-fill-mode: forwards;
 }
 
-@keyframes flipHeads
+@keyframes duplicate
 {
     from {
         transform: rotateY(0deg);
     }
     to {
-        transform: rotateY(900deg);
+        transform: rotateY(360deg);
     }
 }
 
-.animate-tails
+.animate-opposite
 {
-    animation: flipTails 2s ease-in-out;
+    animation: opposite 0.5s ease-in-out;
     animation-fill-mode: forwards;
 }
 
-@keyframes flipTails
+@keyframes opposite
 {
     from {
         transform: rotateY(0deg);
     }
     to {
-        transform: rotateY(900deg);
+        transform: rotateY(180deg);
     }
 }
