@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title> 
+            {% block title %} {% endblock %}
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- For Bootstrap reference: https://bootstrapcreative.com/resources/bootstrap-4-css-classes-index/ -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+        {% block extra_css %} {% endblock %}
+    </head>
+
+    <!-- Standard layout will consist of a large jumbotron banner with a header, the page's contents in a Bootstrap container,
+    followed by a page footer   -->
+
+    <body>
+        <div class="jumbotron">
+            <h1> 
+                {% block header %} {% endblock %}
+            </h1>
+        </div>
+        <div class="container">
+            <!-- Below is templated contents -->
+
+            {% block content %} {% endblock %}
+
+            <!-- Above is templated contents -->
+        </div>
+        <!-- Below is templated footer -->
+
+        {% block footer %} {% endblock %}
+
+        <!-- Above is templated footer -->
+
+        <!-- These two scripts are used for some of Bootstrap's helpful js, currently un used -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script> -->
+
+        {% block extra_js %} {% endblock %}
+    </body>
+
+</html>

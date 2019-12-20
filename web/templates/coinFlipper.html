@@ -1,0 +1,43 @@
+<!-- Use root.html as the base web page design -->
+{% extends "root.html" %}
+
+<!-- Specify title of tab -->
+{% block title %}
+    Coin Flipper
+{% endblock %}
+
+<!-- Provide this page's specific css -->
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/coinFlipper.css') }}">
+{% endblock %}
+
+<!-- Specify header of the page to go in jumbotron -->
+{% block header %}
+    Coin Flipper
+{% endblock %}
+
+<!-- Specify this page's content -->
+{% block content %}
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-body">
+                <p class="card-title">
+                    Click the coin to flip it randomly
+                </p>
+                <div class="mb-1 coin" id="coin" onclick="flip(coin, flipResult)" role="button">
+                    <div class="heads"></div>
+                    <div class="tails"></div>
+                </div>
+                <p class="card-text" id="flipResult">  
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<!-- Provide this page's specifc javascript files -->
+{% block extra_js %}
+    <script src="{{ url_for('static', filename='js/coinFlipper.js') }}"></script>
+{% endblock %}
+
+<!-- Some blocks are not define such as footer, this is fine and the template will just leave it blank -->
