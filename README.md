@@ -10,7 +10,7 @@ A repository dedicated to learning various web application skills by making onli
 - Sorry
 - Mancala
 - Tic-Tac-Toe
-- Coin flip
++ Coin flip
 ```
 
 ---
@@ -23,10 +23,10 @@ For client side, I plan to use JavaScript or TypeScript.
 - Flask v1.1.1
 - Bootstrap v4.4
 - Jinja2 Templates
+- JavaScript
 
 ### To try
 - Database
   - Firebase?
   - MongoDB?
-- JavaScript
 - TypeScript
