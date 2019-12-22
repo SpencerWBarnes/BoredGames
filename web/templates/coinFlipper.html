@@ -3,7 +3,7 @@
 
 <!-- Specify title of tab -->
 {% block title %}
-    Coin Flipper
+    - Coin Flipper
 {% endblock %}
 
 <!-- Provide this page's specific css -->
@@ -14,6 +14,13 @@
 <!-- Specify header of the page to go in jumbotron -->
 {% block header %}
     Coin Flipper
+{% endblock %}
+
+<!-- List header buttons -->
+{% block headerButtons %}
+    <li class="nav-item active">
+        <a class="btn btn-primary" href="#">Home <span class="sr-only">(current)</span></a>
+    </li>
 {% endblock %}
 
 <!-- Specify this page's content -->
