@@ -57,6 +57,20 @@
             </div>
         </div>
 
+        <!-- Persist theme -->
+        <script>
+            let chosenTheme = window.localStorage.getItem("theme");
+            if (chosenTheme == undefined)
+            {
+                window.localStorage.setItem("theme", "light");
+                chosenTheme = "light";
+            }
+            
+            document.getElementById("dark-theme").disabled = (chosenTheme != "dark");
+            document.getElementById("light-theme").disabled = (chosenTheme != "light");
+            document.getElementById("darkModeSwitch").checked = (chosenTheme == "dark");
+        </script>
+
         <!-- These two scripts are used for some of Bootstrap's helpful js, currently un used -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
