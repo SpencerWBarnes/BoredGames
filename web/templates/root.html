@@ -22,9 +22,9 @@
         Bootstrap container, followed by a page footer   -->
 
     <body>
-        <div class="jumbotron jumbotron-fluid bg-dark">
+        <div class="jumbotron jumbotron-fluid bg-primary">
             <nav class="navbar navbar-expand-lg border-0">
-                <h1 class="text-light">
+                <h1>
                     {% block header %} {% endblock %}
                 </h1>
 
@@ -50,10 +50,10 @@
 
             <!-- Above is templated contents -->
         </div>
-        <div class="container-fluid bg-dark text-right">
+        <div class="container-fluid mt-3 text-right">
             <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="darkModeSwitch" onchange="selectTheme(this.checked)">
-                <label class="custom-control-label text-light" for="darkModeSwitch">Toggle Dark Mode</label>
+                <label class="custom-control-label font-weight-bold" for="darkModeSwitch">Toggle Dark Mode</label>
             </div>
         </div>
 
