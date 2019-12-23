@@ -42,12 +42,8 @@ Custom styles to be used on the coin flip game */
 
 @keyframes duplicate
 {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(360deg);
-    }
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
 }
 
 .animate-opposite
@@ -58,10 +54,6 @@ Custom styles to be used on the coin flip game */
 
 @keyframes opposite
 {
-    from {
-        transform: rotateY(180deg);
-    }
-    to {
-        transform: rotateY(360deg);
-    }
+    from { transform: rotateY(180deg); }
+    to { transform: rotateY(360deg); }
 }
