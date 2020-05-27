@@ -39,3 +39,12 @@ I will look into implementing a continuous integration pipeline using Heroku, au
 - Selenium?
 - Heroku
 - Sider
+
+---
+## Development
+
+Depencies:
+- Python 3.8 or higher
+- Pipenv
+
+#### Installation:
