@@ -3,24 +3,45 @@
 
     <head>
         <title> 
-            {% block title %} {% endblock %}
+            Bored Games {% block title %} {% endblock %}
         </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- For Bootstrap reference: https://bootstrapcreative.com/resources/bootstrap-4-css-classes-index/ -->
+        <!-- Standard Bootstrap -->
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <!-- Bootswatch Slate theme -->
+        <link rel="stylesheet" id="dark-theme" type="text/css" href="{{ url_for('static', filename='css/dark/bootstrap.min.css') }}">
+        <!-- Bootswatch Spacelab theme -->
+        <link rel="stylesheet" id="light-theme" type="text/css" href="{{ url_for('static', filename='css/light/bootstrap.min.css') }}">
 
         {% block extra_css %} {% endblock %}
     </head>
 
-    <!-- Standard layout will consist of a large jumbotron banner with a header, the page's contents in a Bootstrap container,
-    followed by a page footer   -->
+    <!-- Standard layout will consist of a large jumbotron banner with a header and nav buttons, the page's contents in a 
+        Bootstrap container, followed by a page footer   -->
 
     <body>
-        <div class="jumbotron">
-            <h1> 
-                {% block header %} {% endblock %}
-            </h1>
+        <div class="jumbotron jumbotron-fluid bg-primary">
+            <nav class="navbar navbar-expand-lg border-0">
+                <h1 class="btn-primary"> <!-- To match Headerbuttons -->
+                    {% block header %} {% endblock %}
+                </h1>
+
+                <!-- Burger menu -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarButtons" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarButtons">
+                    <!-- Right aligned nav buttons -->
+                    <ul class="navbar-nav ml-auto">
+                        {% block headerButtons %} {% endblock %}
+                    </ul>
+                </div>
+            </nav>
+                    
+            
         </div>
         <div class="container">
             <!-- Below is templated contents -->
@@ -29,15 +50,31 @@
 
             <!-- Above is templated contents -->
         </div>
-        <!-- Below is templated footer -->
+        <div class="container-fluid mt-3 text-right">
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="darkModeSwitch" onchange="selectTheme(this.checked)">
+                <label class="custom-control-label font-weight-bold" for="darkModeSwitch">Toggle Dark Mode</label>
+            </div>
+        </div>
 
-        {% block footer %} {% endblock %}
-
-        <!-- Above is templated footer -->
+        <!-- Persist theme -->
+        <script>
+            let chosenTheme = window.localStorage.getItem("theme");
+            if (chosenTheme == undefined)
+            {
+                window.localStorage.setItem("theme", "light");
+                chosenTheme = "light";
+            }
+            
+            document.getElementById("dark-theme").disabled = (chosenTheme != "dark");
+            document.getElementById("light-theme").disabled = (chosenTheme != "light");
+            document.getElementById("darkModeSwitch").checked = (chosenTheme == "dark");
+        </script>
 
         <!-- These two scripts are used for some of Bootstrap's helpful js, currently un used -->
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
         {% block extra_js %} {% endblock %}
     </body>
