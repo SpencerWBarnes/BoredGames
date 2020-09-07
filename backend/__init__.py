@@ -19,4 +19,4 @@ def loadPage(page_name):
         return render_template('404.html'), 404
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
